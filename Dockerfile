@@ -1,3 +1,5 @@
+# Here java 17 is used so were are considering this version.
+ 
 FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
