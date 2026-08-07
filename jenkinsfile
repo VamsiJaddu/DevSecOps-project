@@ -28,5 +28,14 @@ pipeline{
             }
 
         }
+        stage('Docker-build'){
+            steps{
+                sh '''
+                    printenv
+                    echo "Building Docker image.."
+                    docker build -t gameapp:latest .
+                '''
+            }
+        }
     }
 }
