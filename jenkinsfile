@@ -4,6 +4,9 @@ pipeline{
         maven 'maven'
         jdk 'jdk-17'
     }
+    environments{
+        IMAGENAME = 
+    }
     stages{
         stage('Git-checkout'){
             steps{
@@ -35,6 +38,16 @@ pipeline{
                     echo "Building Docker image.."
                     docker build -t gameapp:latest .
                 '''
+            }
+        }
+        stage('Docker-login'){
+            steps{
+
+            }
+        }
+        stage('Docker-push'){
+            steps{
+                
             }
         }
     }
